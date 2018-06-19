@@ -20,7 +20,7 @@ self.addEventListener("connect", function(e) {
 				};
 				ws.onmessage = e => {
 					port.postMessage('data: ' + e.data)
-					port.postMessage('data object: ' + e)
+					port.postMessage('data object: ' + JSON.stringify(e))
 				};
 			} else {
 				port.postMessage("reusing connection to " + url);
