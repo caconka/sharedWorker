@@ -19,7 +19,7 @@ self.addEventListener("connect", function(e) {
 					port.postMessage('page send')
 				};
 				ws.onmessage = e => {
-					port.postMessage('data: ' + e.data)
+					port.postMessage('data: ' + e)
 					port.postMessage('data object: ' + JSON.stringify(e))
 				};
 			} else {
