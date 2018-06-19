@@ -3,6 +3,7 @@
 	<body>
 		<script>
 			var worker = new SharedWorker("shared.js");
+			console.log(worker)
 			worker.port.addEventListener("message", function(e) {
 				console.log("Got message: " + e.data);
 			}, false);
